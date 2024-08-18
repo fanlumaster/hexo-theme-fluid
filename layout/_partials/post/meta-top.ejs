@@ -10,9 +10,21 @@
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
         <time datetime="<%= full_date(page.date, 'YYYY-MM-DD HH:mm') %>" pubdate>
-          <%= full_date(page.date, theme.post.meta.date.format) %>
+          <!-- <%= full_date(page.date, theme.post.meta.date.format) %> -->
+          <%= full_date(page.date, 'YYYY-MM-DD HH:mm') %>
         </time>
       </span>
+    <% } %>
+    <!-- fanyfull updated config -->
+    <% if (theme.post.updated && theme.post.updated.enable) { %>
+    <span>-</span>
+    <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="<%= date(page.updated, 'YYYY-MM-DD HH:mm') %>" pubdate>
+        <!-- <%= date(page.updated, theme.post.meta.date.format) %> -->
+        <%= date(page.updated, 'YYYY-MM-DD HH:mm') %>
+        </time>
+    </span>
     <% } %>
   </div>
 
@@ -51,7 +63,7 @@
           <%- views_texts[0] %><span id="leancloud-page-views"></span><%- views_texts[1] %>
         </span>
         <% import_js(theme.static_prefix.internal_js, 'leancloud.js', 'defer') %>
-      
+
       <% } else if (theme.post.meta.views.source === 'busuanzi')  { %>
         <span id="busuanzi_container_page_pv" style="display: none">
           <i class="iconfont icon-eye" aria-hidden="true"></i>
