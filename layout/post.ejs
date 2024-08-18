@@ -15,7 +15,8 @@ page.banner_mask_alpha = page.banner_mask_alpha || theme.post.banner_mask_alpha
         <div id="board">
           <article class="post-content mx-auto">
             <h1 id="seo-header"><%= page.subtitle || page.title %></h1>
-            <% if (theme.post.updated.enable && theme.post.updated && compare_date(page.date, page.updated)) { %>
+            <!-- fanyfull 注释原本的更新时间 start -->
+            <!-- <% if (theme.post.updated.enable && theme.post.updated && compare_date(page.date, page.updated)) { %>
               <p id="updated-time" class="note note-<%= theme.post.updated.note_class || 'info' %>" style="<%= theme.post.updated.relative ? 'display: none' : '' %>">
                 <% if (theme.post.updated.relative) { %>
                   <% if (theme.post.updated.content) { %>
@@ -34,7 +35,8 @@ page.banner_mask_alpha = page.banner_mask_alpha || theme.post.banner_mask_alpha
                   <% } %>
                 <% } %>
               </p>
-            <% } %>
+            <% } %> -->
+            <!-- fanyfull end -->
             <% if (page.encrypt === true) { %>
               <%- inject_point('postMarkdownBegin') %>
               <%- page.content %>
