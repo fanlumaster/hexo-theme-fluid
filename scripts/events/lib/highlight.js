@@ -82,7 +82,7 @@ module.exports = (hexo) => {
       enable     : true,
       hljs       : true,
       wrap       : false,
-      auto_detect: true,
+      auto_detect: config.code.highlight.highlightjs.auto_detect || false,
       line_number: config.code.highlight.line_number || false
     });
     hexo.config.syntax_highlighter = 'highlight.js';  // hexo v7.0.0+ config
