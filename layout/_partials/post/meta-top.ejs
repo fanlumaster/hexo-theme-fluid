@@ -22,7 +22,7 @@
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
         <time datetime="<%= date(page.updated, 'YYYY-MM-DD HH:mm') %>" pubdate>
         <!-- <%= date(page.updated, theme.post.meta.date.format) %> -->
-        <%= date(page.updated, 'YYYY-MM-DD HH:mm') %>
+        <%= date(new Date(new Date(page.updated).setHours(new Date(page.updated).getHours() + 8)), 'YYYY-MM-DD HH:mm') %>
         </time>
     </span>
     <% } %>
