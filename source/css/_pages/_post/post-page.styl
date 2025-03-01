@@ -179,3 +179,17 @@ mjx-container, .mjx-container
   white-space nowrap
   overflow hidden
   text-overflow ellipsis
+
+@media (min-width: 576px)
+    .container
+        max-width: 720px;
+
+@media (min-width: 768px)
+    .container
+        max-width: 1200px;
+
+.post-content, post-custom {
+    box-sizing: border-box;
+    padding-left: 5%;
+    padding-right: 5%;
+}
